@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25. CSS Variables - CSS3 Course</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Universal mobile responsiveness overrides */
+    * {
+      box-sizing: border-box !important;
+    }
+    html, body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    body {
+      padding: 8px !important;
+      margin: 0 !important;
+    }
+    body * {
+      max-width: 100% !important; /* Prevent any child from overflowing horizontally */
+    }
+    .container {
+      max-width: 100% !important;
+      padding: 10px !important;
+      box-sizing: border-box !important;
+      margin: 0 auto !important;
+    }
+    .card {
+      padding: 12px !important;
+      margin-bottom: 16px !important;
+    }
+    /* Ensure specific demos and custom cards scale responsively */
+    .demo, .card, .glass-card, .neumorphism, .local-box, .fallback-box, .reuse-card, .theme, .light-theme, .dark-theme, .dashboard-card {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .glass-container-bg {
+      padding: 10px !important;
+      box-sizing: border-box !important;
+    }
+    .glass-card {
+      width: 100% !important;
+      padding: 15px !important;
+    }
+    h1 {
+      font-size: 1.4rem !important;
+      margin-bottom: 16px !important;
+      word-wrap: break-word !important;
+    }
+    h2 {
+      font-size: 0.95rem !important;
+      margin-bottom: 12px !important;
+      word-wrap: break-word !important;
+    }
+    .wrap {
+      max-width: 100% !important;
+    }
+    /* Adjust flex, grid and other demo containers */
+    .flex-row, .flex-column,
+    .justify-start, .justify-center, .justify-end, .justify-between, .justify-around, .justify-evenly,
+    .align-start, .align-center, .align-end,
+    .wrap, .gap-demo, .grow-demo, .shrink-demo, .basis-demo, .self-demo {
+      padding: 8px !important;
+      box-sizing: border-box !important;
+    }
+    /* Adjust font size and elements for extra small screens */
+    @media (max-width: 480px) {
+      body {
+        padding: 5px !important;
+      }
+      .container {
+        padding: 6px !important;
+      }
+      .card {
+        padding: 6px !important;
+      }
+      .demo {
+        width: 100% !important;
+        height: 100px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<div class="container">
+  <h1>CSS Variables Playground</h1>
+
+  <!-- 1. Global Variables -->
+  <section class="card">
+    <h2>1. Global Variables</h2>
+    <div style="margin: 20px 0;">
+      <button class="primary-btn">Primary Button</button>
+    </div>
+    <p>Uses variables defined inside :root selector, making them accessible globally.</p>
+  </section>
+
+  <hr>
+
+  <!-- 2. Local Variables -->
+  <section class="card">
+    <h2>2. Local Variables</h2>
+    <div class="local-box">
+      Local Variable Example
+    </div>
+    <p>The yellow color variable exists strictly inside the scope of the .local-box selector.</p>
+  </section>
+
+  <hr>
+
+  <!-- 3. Fallback Values -->
+  <section class="card">
+    <h2>3. Fallback Values</h2>
+    <div class="fallback-box">
+      Fallback Color
+    </div>
+    <p>Attempts to retrieve a non-existent variable, falling back to a default emerald color.</p>
+  </section>
+
+  <hr>
+
+  <!-- 4. Variable Reuse -->
+  <section class="card">
+    <h2>4. Variable Reuse</h2>
+    <div class="reuse-card">
+      Reusable Variables
+    </div>
+    <p>A single card using global padding, background, radius, and shadow tokens together.</p>
+  </section>
+
+  <hr>
+
+  <!-- 5. Light Theme -->
+  <section class="card">
+    <h2>5. Light Theme</h2>
+    <div class="theme light-theme">
+      Light Theme
+    </div>
+    <p>Demonstrates variable overrides inside local blocks to configure theme colors.</p>
+  </section>
+
+  <hr>
+
+  <!-- 6. Dark Theme -->
+  <section class="card">
+    <h2>6. Dark Theme</h2>
+    <div class="theme dark-theme">
+      Dark Theme
+    </div>
+    <p>Switches background and text color variables to dark theme styles inside this container.</p>
+  </section>
+
+  <hr>
+
+  <!-- 7. Card Component -->
+  <section class="card">
+    <h2>7. Card Component</h2>
+    <div class="dashboard-card">
+      Dashboard Card
+    </div>
+    <p>A clean, hoverable card component constructed with global variable tokens.</p>
+  </section>
+
+  <hr>
+
+  <!-- 8. Student Summary -->
+  <section class="card">
+    <h2>8. Student Summary</h2>
+    <p style="font-size: 14px; font-weight: 500; color: #1e293b; margin: 0;">
+      One variable can update hundreds of CSS rules instantly across your website!
+    </p>
+  </section>
+</div>
+
+</body>
+</html>

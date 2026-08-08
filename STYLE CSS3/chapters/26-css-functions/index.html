@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>26. CSS Functions - CSS3 Course</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Universal mobile responsiveness overrides */
+    * {
+      box-sizing: border-box !important;
+    }
+    html, body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    body {
+      padding: 8px !important;
+      margin: 0 !important;
+    }
+    body * {
+      max-width: 100% !important; /* Prevent any child from overflowing horizontally */
+    }
+    .container {
+      max-width: 100% !important;
+      padding: 10px !important;
+      box-sizing: border-box !important;
+      margin: 0 auto !important;
+    }
+    .card {
+      padding: 12px !important;
+      margin-bottom: 16px !important;
+    }
+    /* Ensure specific demos and custom cards scale responsively */
+    .demo, .card, .glass-card, .neumorphism, .local-box, .fallback-box, .reuse-card, .theme, .light-theme, .dark-theme, .dashboard-card {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .glass-container-bg {
+      padding: 10px !important;
+      box-sizing: border-box !important;
+    }
+    .glass-card {
+      width: 100% !important;
+      padding: 15px !important;
+    }
+    h1 {
+      font-size: 1.4rem !important;
+      margin-bottom: 16px !important;
+      word-wrap: break-word !important;
+    }
+    h2 {
+      font-size: 0.95rem !important;
+      margin-bottom: 12px !important;
+      word-wrap: break-word !important;
+    }
+    .wrap {
+      max-width: 100% !important;
+    }
+    /* Adjust flex, grid and other demo containers */
+    .flex-row, .flex-column,
+    .justify-start, .justify-center, .justify-end, .justify-between, .justify-around, .justify-evenly,
+    .align-start, .align-center, .align-end,
+    .wrap, .gap-demo, .grow-demo, .shrink-demo, .basis-demo, .self-demo {
+      padding: 8px !important;
+      box-sizing: border-box !important;
+    }
+    /* Adjust font size and elements for extra small screens */
+    @media (max-width: 480px) {
+      body {
+        padding: 5px !important;
+      }
+      .container {
+        padding: 6px !important;
+      }
+      .card {
+        padding: 6px !important;
+      }
+      .demo {
+        width: 100% !important;
+        height: 100px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<div class="container">
+  <h1>CSS Functions Playground</h1>
+
+  <!-- 1. calc() -->
+  <section class="card">
+    <h2>1. calc()</h2>
+    <div class="parent">
+      <div class="calc-box">
+        calc(100% - 80px)
+      </div>
+    </div>
+    <p>Dynamically subtracts 80px from the 100% parent container width.</p>
+  </section>
+
+  <hr>
+
+  <!-- 2. min() -->
+  <section class="card">
+    <h2>2. min()</h2>
+    <div class="min-box">
+      min(400px, 100%)
+    </div>
+    <p>Selects whichever value is smaller: 400px or 100% of the parent width.</p>
+  </section>
+
+  <hr>
+
+  <!-- 3. max() -->
+  <section class="card">
+    <h2>3. max()</h2>
+    <div class="max-box">
+      max(300px, 50%)
+    </div>
+    <p>Selects whichever value is larger: 300px or 50% of the parent width.</p>
+  </section>
+
+  <hr>
+
+  <!-- 4. clamp() -->
+  <section class="card">
+    <h2>4. clamp()</h2>
+    <h1 class="clamp-text">Responsive Heading</h1>
+    <p>Restricts text sizes between 20px (minimum) and 50px (maximum), using 5vw preferred scaling.</p>
+  </section>
+
+  <hr>
+
+  <!-- 5. var() -->
+  <section class="card">
+    <h2>5. var()</h2>
+    <div style="margin: 20px 0;">
+      <button class="btn">CSS Variable</button>
+    </div>
+    <p>Fetches variable tokens defined inside :root.</p>
+  </section>
+
+  <hr>
+
+  <!-- 6. rgb() -->
+  <section class="card">
+    <h2>6. rgb()</h2>
+    <div class="rgb-box">
+      RGB Colors
+    </div>
+    <p>Creates standard solid colors using Red, Green, Blue integer indices.</p>
+  </section>
+
+  <hr>
+
+  <!-- 7. rgba() -->
+  <section class="card">
+    <h2>7. rgba()</h2>
+    <div class="rgba-box">
+      RGBA Colors
+    </div>
+    <p>Extends rgb() by adding an alpha channel (opacity) from 0 to 1.</p>
+  </section>
+
+  <hr>
+
+  <!-- 8. hsl() -->
+  <section class="card">
+    <h2>8. hsl()</h2>
+    <div class="hsl-box">
+      HSL Colors
+    </div>
+    <p>Generates colors via Hue angle (0-360), Saturation (%), and Lightness (%).</p>
+  </section>
+
+  <hr>
+
+  <!-- 9. url() -->
+  <section class="card">
+    <h2>9. url()</h2>
+    <div class="url-box">
+      Background Image
+    </div>
+    <p>Loads external resources like images, svgs, or custom font-face files.</p>
+  </section>
+</div>
+
+</body>
+</html>
