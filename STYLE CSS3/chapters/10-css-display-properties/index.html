@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10. CSS Display Properties - CSS3 Course</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Universal mobile responsiveness overrides */
+    * {
+      box-sizing: border-box !important;
+    }
+    html, body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    body {
+      padding: 8px !important;
+      margin: 0 !important;
+    }
+    body * {
+      max-width: 100% !important; /* Prevent any child from overflowing horizontally */
+    }
+    .container {
+      max-width: 100% !important;
+      padding: 10px !important;
+      box-sizing: border-box !important;
+      margin: 0 auto !important;
+    }
+    .card {
+      padding: 12px !important;
+      margin-bottom: 16px !important;
+    }
+    /* Ensure specific demos and custom cards scale responsively */
+    .demo, .card, .glass-card, .neumorphism, .local-box, .fallback-box, .reuse-card, .theme, .light-theme, .dark-theme, .dashboard-card {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .glass-container-bg {
+      padding: 10px !important;
+      box-sizing: border-box !important;
+    }
+    .glass-card {
+      width: 100% !important;
+      padding: 15px !important;
+    }
+    h1 {
+      font-size: 1.4rem !important;
+      margin-bottom: 16px !important;
+      word-wrap: break-word !important;
+    }
+    h2 {
+      font-size: 0.95rem !important;
+      margin-bottom: 12px !important;
+      word-wrap: break-word !important;
+    }
+    .wrap {
+      max-width: 100% !important;
+    }
+    /* Adjust flex, grid and other demo containers */
+    .flex-row, .flex-column,
+    .justify-start, .justify-center, .justify-end, .justify-between, .justify-around, .justify-evenly,
+    .align-start, .align-center, .align-end,
+    .wrap, .gap-demo, .grow-demo, .shrink-demo, .basis-demo, .self-demo {
+      padding: 8px !important;
+      box-sizing: border-box !important;
+    }
+    /* Adjust font size and elements for extra small screens */
+    @media (max-width: 480px) {
+      body {
+        padding: 5px !important;
+      }
+      .container {
+        padding: 6px !important;
+      }
+      .card {
+        padding: 6px !important;
+      }
+      .demo {
+        width: 100% !important;
+        height: 100px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<div class="display-container">
+  <h1>CSS Display Mechanics</h1>
+  
+  <div class="section block-demo">
+    <h3>1. Block Elements (Takes full width)</h3>
+    <div class="block-box">Block Box 1</div>
+    <div class="block-box">Block Box 2</div>
+  </div>
+
+  <div class="section inline-demo">
+    <h3>2. Inline Elements (Shrinks to fit contents)</h3>
+    <span class="inline-box">Inline 1</span>
+    <span class="inline-box">Inline 2</span>
+    <span class="inline-box">Inline 3</span>
+  </div>
+
+  <div class="section inline-block-demo">
+    <h3>3. Inline-Block (Inline grid, supports size/padding)</h3>
+    <div class="inline-block-box">Box 1</div>
+    <div class="inline-block-box">Box 2</div>
+  </div>
+
+  <div class="section visibility-comparison">
+    <h3>4. Display: None vs Visibility: Hidden</h3>
+    <div class="flex-row">
+      <div class="card normal">Visible Box</div>
+      <div class="card gone">Display: None (removes block)</div>
+      <div class="card invisible">Visibility: Hidden (retains space)</div>
+      <div class="card normal">Next Box</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
